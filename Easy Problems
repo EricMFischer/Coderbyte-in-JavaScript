@@ -1,0 +1,65 @@
+//Coderbyte Solutions
+
+//Problem 1
+function firstReverse(str) {
+    return str.split("").reverse().join("");
+}
+
+//Problem 2
+function FirstFactorial(num) {
+    if (num === 0) {
+        return 1;
+    } else {
+    return num * FirstFactorial(num - 1);
+    }
+}
+
+//Problem 3
+function LongestWord(sen) {
+    var sentence = sen.split("")
+                      .sort(function(a,b){
+        return b.replace(/\W/g, "").length - a.replace(/\W/g, "").length;
+    });
+    return sentence.shift();
+}
+
+//Problem 4
+function LetterChanges(str) {
+    str.replace(/\w/g, function(x) {
+        return String.fromCharCode(x.charCodeAt(0)+1);
+    })
+       .replace(/[aeiou]/g, function (y) {
+           return y.toUpperCase();
+       });
+}
+
+//Problem 5
+function SimpleAdding(num) {
+    var sum = 0;
+    for (var i=1; i<num+1; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+//Problem 6
+function LetterCapitalize(str) {
+    var word = [];
+    var sep = str.split("");
+    for (var i=0; i<sep.length; i++) {
+        word.push(sep[i][0].toUpperCase() + sep[i].slice(1));
+    }
+    return word.join("");
+}
+
+//Problem 7
+function SimpleSymbols(str) {
+    var text = string.split("");
+    var alpha = "abcdefghijklmnopqrstuvwxyz";
+    for (var i=0; i<text.length; i++) {
+        if ((alpha.indexOf(text[i]) !== -1) && (text[i-1] !== "+" || text[i+1] !== "+")) {
+            return false;
+        }
+    }
+    return true;
+}
