@@ -63,3 +63,27 @@ function SimpleSymbols(str) {
     }
     return true;
 }
+
+//Problem 8
+function CheckNums (num1, num2) {
+    if (num2 > num1) {
+        return true;
+    } else if (num2 < num1) {
+        return false;
+    } else {
+        return "-1";
+    }
+}
+
+//Problem 9
+function TimeConvert(num) {
+    h = Math.floor(num/60);
+    m = num % 60;
+    return (h + ":" + m).toString();
+}
+
+//Problem 10
+function AlphabetSoup (str) {
+    var word = str.split("");
+    return word.sort().join("");
+}
