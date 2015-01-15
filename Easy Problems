@@ -87,3 +87,70 @@ function AlphabetSoup (str) {
     var word = str.split("");
     return word.sort().join("");
 }
+
+// Problem 11
+function ABCheck(str) {
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] == "a") {
+            if (str[i+3] == "b") {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+//Problem 12
+function VowelCount (str) {
+    var vowel = str.replace(/[^aeiou]/g, "");
+    return vowel.length;
+}
+
+//Problem 13
+function WordCount (str) {
+    var x = str.split("");
+    return x.length;
+}
+
+//Problem 14
+function ExOh (str) {
+    var counto = 0;
+    var countx = 0;
+    var x = str.split("");
+    
+    for (var i = 0; i < x.length; i++) {
+        if (x[i] === "o") {
+            counto += 1;
+        } else if (x[i] === "x") {
+            countx += 1;
+        }
+    }
+    
+    if (counto === countx) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//Problem 15
+function Palindrome (str) {
+    var x = str.split(" ").join("").split("");
+    
+    if (x.join("") === x.reverse().join("")) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//Problem 16
+function ArithGeo(arr) {
+}
+
+//Problem 17
+
+//Problem 18
+function LetterCountI(str) {
+    return 
+}
