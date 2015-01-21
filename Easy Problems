@@ -13,22 +13,16 @@ function FirstFactorial(num) {
 function LongestWord(sen) { return sen.match(/[\w]+/g).sort(function(a,b) {return b.length - a.length}).shift(); }
 
 //Problem 4
-function LetterChanges(str) {
-    str.replace(/\w/g, function(x) {
-        return String.fromCharCode(x.charCodeAt(0)+1);
-    })
-       .replace(/[aeiou]/g, function (y) {
-           return y.toUpperCase();
-       });
+function LetterChanges(str) { 
+  return str.replace(/\w/g, function (x) {return String.fromCharCode(x.charCodeAt(0)+1);})
+            .replace(/[aeiou]/g, function (y) {return y.toUpperCase();});
 }
 
 //Problem 5
 function SimpleAdding(num) {
-    var sum = 0;
-    for (var i=1; i<num+1; i++) {
-        sum += i;
-    }
-    return sum;
+  var sum = 0;
+  for (var i=1; i<=num; i++) {sum += i;}
+  return sum;
 }
 
 //Problem 6
