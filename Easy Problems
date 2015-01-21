@@ -1,27 +1,16 @@
 //Coderbyte Solutions
 
 //Problem 1
-function firstReverse(str) {
-    return str.split("").reverse().join("");
-}
+function firstReverse(str) {return str.split("").reverse().join("");}
 
 //Problem 2
 function FirstFactorial(num) {
-    if (num === 0) {
-        return 1;
-    } else {
-    return num * FirstFactorial(num - 1);
-    }
+    if (num === 0) {return 1;} 
+    else {return num * FirstFactorial(num - 1);}
 }
 
 //Problem 3
-function LongestWord(sen) {
-    var sentence = sen.split("")
-                      .sort(function(a,b){
-        return b.replace(/\W/g, "").length - a.replace(/\W/g, "").length;
-    });
-    return sentence.shift();
-}
+function LongestWord(sen) { return sen.match(/[\w]+/g).sort(function(a,b) {return b.length - a.length}).shift(); }
 
 //Problem 4
 function LetterChanges(str) {
