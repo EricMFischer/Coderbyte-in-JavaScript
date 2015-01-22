@@ -55,9 +55,8 @@ function TimeConvert(num) {
 }
 
 //Problem 10
-function AlphabetSoup (str) {
-    var word = str.split("");
-    return word.sort().join("");
+function AlphabetSoup(str) {
+  return str.split("").sort().join("");     
 }
 
 // Problem 11
