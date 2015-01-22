@@ -1,7 +1,9 @@
 //Coderbyte Solutions
 
 //Problem 1
-function firstReverse(str) {return str.split("").reverse().join("");}
+function firstReverse(str) {
+    return str.split("").reverse().join("");
+}
 
 //Problem 2
 function FirstFactorial(num) {
@@ -10,7 +12,9 @@ function FirstFactorial(num) {
 }
 
 //Problem 3
-function LongestWord(sen) { return sen.match(/[\w]+/g).sort(function(a,b) {return b.length - a.length}).shift(); }
+function LongestWord(sen) {
+    return sen.match(/[\w]+/g).sort(function(a,b) {return b.length - a.length}).shift();
+}
 
 //Problem 4
 function LetterChanges(str) { 
@@ -77,7 +81,7 @@ function VowelCount(str) {
 
 //Problem 13
 function WordCount(str) {
-  return str.replace(/[^aeiou]/g,"").length;
+  return str.split(" ").length;
 }
 
 //Problem 14
