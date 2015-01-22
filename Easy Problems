@@ -26,13 +26,10 @@ function SimpleAdding(num) {
 }
 
 //Problem 6
-function LetterCapitalize(str) {
-    var word = [];
-    var sep = str.split("");
-    for (var i=0; i<sep.length; i++) {
-        word.push(sep[i][0].toUpperCase() + sep[i].slice(1));
-    }
-    return word.join("");
+ function LetterCapitalize(str) { 
+  str = str.replace(/\b\w/g, function (capLetter) {
+    return capLetter.toUpperCase(); });
+  return str;
 }
 
 //Problem 7
