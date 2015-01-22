@@ -5,7 +5,7 @@ function firstReverse(str) {return str.split("").reverse().join("");}
 
 //Problem 2
 function FirstFactorial(num) {
-    if (num === 0) {return 1;} 
+    if (num===0) {return 1;} 
     else {return num * FirstFactorial(num - 1);}
 }
 
@@ -61,26 +61,23 @@ function AlphabetSoup(str) {
 
 // Problem 11
 function ABCheck(str) {
-    for (var i = 0; i < str.length; i++) {
-        if (str[i] == "a") {
-            if (str[i+3] == "b") {
-                return true;
-            }
-        }
+  for (var i=0; i<str.length; i++) {
+    if (str[i]=="a") {
+      if (str[i+4]=="b") {
+        return true;} 
     }
-    return false;
+}
+  return false;
 }
 
 //Problem 12
-function VowelCount (str) {
-    var vowel = str.replace(/[^aeiou]/g, "");
-    return vowel.length;
+function VowelCount(str) {
+  return str.replace(/[^aeiou]/g, "").length;
 }
 
 //Problem 13
-function WordCount (str) {
-    var x = str.split("");
-    return x.length;
+function WordCount(str) {
+  return str.replace(/[^aeiou]/g,"").length;
 }
 
 //Problem 14
