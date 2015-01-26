@@ -17,8 +17,8 @@ function LongestWord(sen) {
 }
 
 //Problem 4
-function LetterChanges(str) { 
-  return str.replace(/\w/g, function (x) {return String.fromCharCode(x.charCodeAt(0)+1);})
+function LetterChanges(str) {
+  return str.replace(/\w/g, function (x) {return String.fromCharCode(x.charCodeAt(0) + 1);})
             .replace(/[aeiou]/g, function (y) {return y.toUpperCase();});
 }
 
