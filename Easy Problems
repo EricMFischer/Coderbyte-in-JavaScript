@@ -30,10 +30,8 @@ function SimpleAdding(num) {
 }
 
 //Problem 6
- function LetterCapitalize(str) { 
-  str = str.replace(/\b\w/g, function (capLetter) {
-    return capLetter.toUpperCase(); });
-  return str;
+function LetterCapitalize(str) {
+  return str.replace(/\b\w/g, function (capLetter) {return capLetter.toUpperCase();} );
 }
 
 //Problem 7
