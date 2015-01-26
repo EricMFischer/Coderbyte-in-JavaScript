@@ -8,12 +8,12 @@ function firstReverse(str) {
 //Problem 2
 function FirstFactorial(num) {
     if (num===0) {return 1;} 
-    else {return num * FirstFactorial(num - 1);}
+    else {return num * FirstFactorial(num-1);}
 }
 
 //Problem 3
 function LongestWord(sen) {
-    return sen.match(/[\w]+/g).sort(function(a,b) {return b.length - a.length}).shift();
+    return sen.match(/[\w]+/g).sort( function(a,b) {return b.length - a.length}).shift();
 }
 
 //Problem 4
