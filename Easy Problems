@@ -7,7 +7,7 @@ function firstReverse(str) {
 
 //Problem 2
 function FirstFactorial(num) {
-    if (num===0) {return 1;} 
+    if (num === 0) {return 1;} 
     else {return num * FirstFactorial(num-1);}
 }
 
@@ -36,19 +36,19 @@ function LetterCapitalize(str) {
 
 //Problem 7
 function SimpleSymbols(str) {
-  var strs = str.split("");
-  var letters = "abcdefghijklmnopqrstuvwxyz";
-  for (var i=0; i<strs.length; i++) {
-    if (letters.indexOf(strs[i]) != -1  &&  (strs[i-1] != "+" || strs[i+1] != "+")) 
-    {return false;} 
+  var alpha = "abcdefghijklmnopqrstuvwxyz";
+  var text = str.split("");
+  for (var i=0; i<text.length; i++) {
+    if ( alpha.indexOf(text[i]) != -1  &&  (text[i-1] != "+" || text[i+1] != "+") ) 
+    {return false;}
   } 
   return true;
 }
 
 //Problem 8
-function CheckNums(num1,num2) {
-  if (num2==num1) {return true;}
-  else {return num2>num1;}
+function CheckNums(num1,num2) { 
+  if (num1 == num2) {return true;}
+  else {return num2 > num1;}
 }
 
 //Problem 9
