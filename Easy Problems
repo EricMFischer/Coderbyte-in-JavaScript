@@ -97,14 +97,11 @@ function ExOh(str) {
 }
 
 //Problem 15
-function Palindrome (str) {
-    var x = str.split(" ").join("").split("");
-    
-    if (x.join("") === x.reverse().join("")) {
-        return true;
-    } else {
-        return false;
-    }
+function Palindrome(str) {
+  var originalStr = str.split(" ").join("");
+  var reversedStr = str.split(" ").join("").split("").reverse().join("");
+  if (originalStr === reversedStr) {return true;}
+  else {return false;}
 }
 
 //Problem 16
