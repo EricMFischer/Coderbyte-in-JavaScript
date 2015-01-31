@@ -106,11 +106,44 @@ function Palindrome(str) {
 
 //Problem 16
 function ArithGeo(arr) {
+  var first = arr[0];
+  var second = arr[1];
+  var last = arr[arr.length-1];
+  var secondToLast = arr[arr.length-2];
+  
+  if ((second - first) === (last - secondToLast)) {return "Arithmetic";} 
+  else if ((second / first) === (last / secondToLast)) {return "Geometric";} 
+  else {return "-1";}      
 }
 
 //Problem 17
+function ArrayAdditionI(arr) { 
+  arr.sort(function(a,b){return a - b});
+  var largest = arr.pop();
+  var sum = 0;
+  
+  for (var i=0; i<arr.length; i++){
+    sum += arr[i];
+    for (var j=0; j<arr.length; j++){   
+      if (i != j) { 
+        sum += arr[j];
+        if (sum == largest) {
+          return true;
+        }
+      }
+    }
+    for (var k=0; k<arr.length; k++) {  // If no match, start 2nd loop to re-iterate removing index values
+      if (i != k) {
+        sum -= arr[k];
+        if (sum == largest) {
+          return true;
+        }
+      }
+    }
+    sum = 0;
+  }
+  return false; 
+}
 
 //Problem 18
-function LetterCountI(str) {
-    return 
-}
+
