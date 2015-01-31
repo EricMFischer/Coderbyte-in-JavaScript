@@ -146,4 +146,31 @@ function ArrayAdditionI(arr) {
 }
 
 //Problem 18
+function LetterCountI(str) {
+  var text = str.split(" ");
+  var count = 0;
+  
+  for (var i=0; i<text.length; i++) {
+    var word = text[i];
+    for (var j=0; j<word.length; j++) {
+      var letter = word[j];
+      for (var k=0; k<word.length; k++) {
+        if ((j!==k) && (letter === word[k])) {
+          count++;
+          if (count>0) {
+            return word;
+          }
+        }
+      }
+    }
+  }
+  return -1; 
+}
+
+//Problem 19
+
+
+
+
+
 
