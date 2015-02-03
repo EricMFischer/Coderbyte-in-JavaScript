@@ -96,6 +96,7 @@ function ExOh(str) {
   return xCount == oCount;
 }
 
+
 //Problem 15
 function Palindrome(str) {
   var originalStr = str.split(" ").join("");
@@ -103,6 +104,7 @@ function Palindrome(str) {
   if (originalStr === reversedStr) {return true;}
   else {return false;}
 }
+
 
 //Problem 16
 function ArithGeo(arr) {
@@ -115,6 +117,7 @@ function ArithGeo(arr) {
   else if ((second / first) === (last / secondToLast)) {return "Geometric";} 
   else {return "-1";}      
 }
+
 
 //Problem 17
 function ArrayAdditionI(arr) { 
@@ -132,7 +135,7 @@ function ArrayAdditionI(arr) {
         }
       }
     }
-    for (var k=0; k<arr.length; k++) {  // If no match, start 2nd loop to re-iterate removing index values
+    for (var k=0; k<arr.length; k++) {
       if (i != k) {
         sum -= arr[k];
         if (sum == largest) {
@@ -193,9 +196,7 @@ function DivisionStringified(num1,num2) {
     for (var i=0; i<reversed.length; i++){
       total++;
       array.push(reversed[i]);
-      if(total%3 === 0){
-        array.push(",");
-      }
+      if(total%3 === 0) {array.push(",");}
     }
     return array.reverse().join("");
   } 
@@ -285,6 +286,10 @@ function NumberAddition(str) {
 }
 
 //Problem 26
+function ThirdGreatest(strArr) {
+  strArr.sort(function(a,b) {return b.length - a.length;});
+  return strArr[2];
+}
 
 //Problem 27
 
