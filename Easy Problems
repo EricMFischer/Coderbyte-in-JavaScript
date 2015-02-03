@@ -275,6 +275,27 @@ function SwapCase(str) {
 }
 
 //Problem 25
+function NumberAddition(str) {
+  var arr = str.replace(/\D/g, " ").split(" ").filter(function(arr) {return arr !== ""});
+  var total = 0;
+  for (var i=0; i<arr.length; i++) {
+    total = total + parseInt(arr[i])
+      }
+  return total;
+}
+
+//Problem 26
+
+//Problem 27
+
+//Problem 28
+
+//Problem 29
+
+//Problem 30
+
+
+
 
 
 
