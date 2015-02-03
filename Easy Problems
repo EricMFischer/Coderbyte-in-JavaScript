@@ -5,22 +5,26 @@ function firstReverse(str) {
     return str.split("").reverse().join("");
 }
 
+
 //Problem 2
 function FirstFactorial(num) {
     if (num === 0) {return 1;} 
     else {return num * FirstFactorial(num-1);}
 }
 
+
 //Problem 3
 function LongestWord(sen) {
     return sen.match(/[\w]+/g).sort( function(a,b) {return b.length - a.length}).shift();
 }
+
 
 //Problem 4
 function LetterChanges(str) {
   return str.replace(/\w/g, function (x) {return String.fromCharCode(x.charCodeAt(0) + 1);})
             .replace(/[aeiou]/g, function (y) {return y.toUpperCase();});
 }
+
 
 //Problem 5
 function SimpleAdding(num) {
@@ -29,10 +33,12 @@ function SimpleAdding(num) {
   return sum;
 }
 
+
 //Problem 6
 function LetterCapitalize(str) {
   return str.replace(/\b\w/g, function (capLetter) {return capLetter.toUpperCase();} );
 }
+
 
 //Problem 7
 function SimpleSymbols(str) {
@@ -45,21 +51,25 @@ function SimpleSymbols(str) {
   return true;
 }
 
+
 //Problem 8
 function CheckNums(num1,num2) {
   if (num1 === num2) {return -1;}
   else {return num2 > num1;}
 }
 
+
 //Problem 9
 function TimeConvert(num) {
   return Math.floor(num/60) + ":" + num%60;
 }
 
+
 //Problem 10
 function AlphabetSoup(str) {
   return str.split("").sort().join("");     
 }
+
 
 // Problem 11
 function ABCheck(str) {
@@ -69,6 +79,7 @@ function ABCheck(str) {
   }
   return false;
 }
+
 
 //Problem 12
 function VowelCount(str) {
@@ -80,10 +91,12 @@ function VowelCount(str) {
   return count;
 }
 
+
 //Problem 13
 function WordCount(str) {
   return str.split(" ").length;
 }
+
 
 //Problem 14
 function ExOh(str) {
@@ -148,6 +161,7 @@ function ArrayAdditionI(arr) {
   return false; 
 }
 
+
 //Problem 18
 function LetterCountI(str) {
   var text = str.split(" ");
@@ -170,6 +184,7 @@ function LetterCountI(str) {
   return -1; 
 }
 
+
 //Problem 19
 function SecondGreatLow(arr) {
   var unique = [arr[0]];
@@ -184,6 +199,7 @@ function SecondGreatLow(arr) {
   var largest = unique[1];
   return smallest + " " + largest;
 }
+
 
 //Problem 20
 function DivisionStringified(num1,num2) {
@@ -202,6 +218,7 @@ function DivisionStringified(num1,num2) {
   } 
   else {return answer;}
 }
+
 
 //Problem 21
 function CountingMinutesI (str) {
@@ -222,6 +239,7 @@ function CountingMinutesI (str) {
   if (time1min > time2min) {return 24*60 - (time1min - time2min);}
   else {return time2min - time1min;}
 }
+
 
 //Problem 22
 function MeanMode(arr) {
@@ -249,6 +267,7 @@ function MeanMode(arr) {
   else {return 0;}
 }
 
+
 //Problem 23
 function DashInsert(str) {
   var num = str.toString().split("");
@@ -263,6 +282,7 @@ function DashInsert(str) {
   return result.join("");
 }
 
+
 //Problem 24
 function SwapCase(str) {
   p = [];
@@ -275,6 +295,7 @@ function SwapCase(str) {
   return p.join("");
 }
 
+
 //Problem 25
 function NumberAddition(str) {
   var arr = str.replace(/\D/g, " ").split(" ").filter(function(arr) {return arr !== ""});
@@ -285,25 +306,25 @@ function NumberAddition(str) {
   return total;
 }
 
+
 //Problem 26
 function ThirdGreatest(strArr) {
   strArr.sort(function(a,b) {return b.length - a.length;});
   return strArr[2];
 }
 
+
 //Problem 27
+
+
 
 //Problem 28
 
+
+
 //Problem 29
 
+
+
 //Problem 30
-
-
-
-
-
-
-
-
 
