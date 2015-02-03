@@ -218,7 +218,7 @@ function CountingMinutesI (str) {
   if (time2meridiem === "p" && time2[0] !== "12") {time2min += 12*60;}
   if (time2meridiem === "a" && time2[0] === "12") {time2min -= 12*60;}
 
-  if (time1min > time2min) {return (24*60) - (time1min-time2min);}
+  if (time1min > time2min) {return 24*60 - (time1min - time2min);}
   else {return time2min - time1min;}
 }
 
