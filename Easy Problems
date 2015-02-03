@@ -223,6 +223,30 @@ function CountingMinutesI (str) {
 }
 
 //Problem 22
+function MeanMode(arr) {
+  var mode;
+  var modeCount = 1;
+  var sum = 0;
+  var mean;
+  var total = 0;
+  for (var i=0; i<arr.length; i++) {
+    total += arr[i];
+    for (var j=0; j<arr.length; j++) {
+      if (arr[i] === arr[j]) {
+          sum += 1;
+          if (sum > modeCount) {
+            modeCount = sum;
+            mode = arr[i];
+          }
+      }
+    }
+    sum = 0;
+  }
+  var mean = Math.round(total/arr.length);
+  
+  if (mode === mean) {return 1;}
+  else {return 0;}
+}
 
 //Problem 23
 
