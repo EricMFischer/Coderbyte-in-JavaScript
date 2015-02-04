@@ -325,7 +325,19 @@ function PowersofTwo(num) {
 
 
 //Problem 28
-
+function AdditivePersistence(num) {
+  var sum = 0;
+  var loopCount = 0;
+  var value = num.toString().split("").map(function(t) {return parseInt(t)});
+  
+  while (value.length > 1) {
+    sum = 0;
+    value.forEach(function(number) {sum += number;});
+    value = sum.toString().split("").map(function(t) {return parseInt(t)});
+    loopCount++;
+  }
+  return loopCount;       
+}
 
 
 //Problem 29
