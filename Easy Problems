@@ -188,18 +188,17 @@ function LetterCountI(str) {
 
 
 //Problem 19
-function SecondGreatLow(arr) {
-  var unique = [arr[0]];
-  for (var i=1; i<arr.length; i++) {
-    if (unique.indexOf(arr[i]) === -1) {
-      unique.push(arr[i]);
+function SecondGreatLow (arr) {
+    var newArr = [arr[0]];
+    for (var i=1; i<arr.length; i++) {
+        if (newArr.indexOf(arr[i]) === -1) {newArr.push(arr[i]);}
     }
-  }
-  unique.sort(function(a,b){return a - b;});
-  var smallest = unique[1];
-  unique.reverse();
-  var largest = unique[1];
-  return smallest + " " + largest;
+    
+    newArr.sort(function(a,b) {return a-b;});
+    var secondLowest = newArr[1];
+    newArr.reverse();
+    var secondGreatest = newArr[1];
+    return secondLowest + " " + secondGreatest;
 }
 
 
