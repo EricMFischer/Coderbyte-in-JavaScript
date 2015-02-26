@@ -8,14 +8,16 @@ function firstReverse(str) {
 
 //Problem 2
 function FirstFactorial(num) {
-    if (num === 0) {return 1;} 
+    if (num===1) {return 1;} 
     else {return num * FirstFactorial(num-1);}
 }
 
 
 //Problem 3
 function LongestWord(sen) {
-    return sen.match(/[\w]+/g).sort( function(a,b) {return b.length - a.length}).shift();
+    return sen.match(/[\w]+/g)
+              .sort( function(a,b) {return b.length - a.length})
+              .shift();
 }
 
 
@@ -41,14 +43,14 @@ function LetterCapitalize(str) {
 
 
 //Problem 7
-function SimpleSymbols(str) {
-  var alpha = "abcdefghijklmnopqrstuvwxyz";
-  var text = str.split("");
-  for (var i=0; i<text.length; i++) {
-    if ( alpha.indexOf(text[i]) != -1  &&  (text[i-1] != "+" || text[i+1] != "+") ) 
-    {return false;}
-  } 
-  return true;
+function SimpleSymbols (str) {
+    var alpha = "abcdefghijklmnopqrstuvwx";
+    for (var i=0; i<str.length; i++) {
+        if ( alpha.indexOf(str[i]) != -1  &&
+             ((str[i+1] != "+") || str[i-1] != "+") ) 
+        {return false;}
+    }
+    return true;
 }
 
 
