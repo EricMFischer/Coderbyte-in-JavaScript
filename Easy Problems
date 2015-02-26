@@ -113,11 +113,11 @@ function ExOh(str) {
 
 
 //Problem 15
-function Palindrome(str) {
-  var originalStr = str.split(" ").join("");
-  var reversedStr = str.split(" ").join("").split("").reverse().join("");
-  if (originalStr === reversedStr) {return true;}
-  else {return false;}
+function Palindrome (str) {
+    var originalStr = str.split(" ").join("");
+    var reversedStr = originalStr.split("").reverse().join("");
+    if (originalStr === reversedStr) {return true;}
+    else {return false;}
 }
 
 
