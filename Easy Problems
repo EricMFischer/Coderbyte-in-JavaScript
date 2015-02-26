@@ -204,20 +204,20 @@ function SecondGreatLow (arr) {
 
 //Problem 20
 function DivisionStringified(num1,num2) {
-  var answer = Math.round(num1/num2).toString(); 
-  if (answer.length > 3) {
-    var array = [];
-    var reversed = answer.split("").reverse();
-    var total = 0;
-    
-    for (var i=0; i<reversed.length; i++){
-      total++;
-      array.push(reversed[i]);
-      if(total%3 === 0) {array.push(",");}
+    var answer = Math.round(num1/num2).toString();
+    if (answer.length>3) {
+        var reversed = answer.split("").reverse();
+        var count = 0;
+        var array = [];
+        for (var i=0; i<reversed.length; i++) {
+            count++;
+            array.push(reversed[i]);
+            if (count%3===0) {array.push(",");}
+        }
+        return array.reverse().join("");
     }
-    return array.reverse().join("");
-  } 
-  else {return answer;}
+    else {return answer;} 
+}
 }
 
 
