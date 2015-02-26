@@ -122,15 +122,15 @@ function Palindrome (str) {
 
 
 //Problem 16
-function ArithGeo(arr) {
-  var first = arr[0];
-  var second = arr[1];
-  var last = arr[arr.length-1];
-  var secondToLast = arr[arr.length-2];
-  
-  if ((second - first) === (last - secondToLast)) {return "Arithmetic";} 
-  else if ((second / first) === (last / secondToLast)) {return "Geometric";} 
-  else {return "-1";}      
+function ArithGeo (arr) {
+    var first = arr[0];
+    var second = arr[1];
+    var last = arr[arr.length-1];
+    var secondToLast = arr[arr.length-2];
+    
+    if (second-first === last-secondToLast) {return "Arithmetic";}
+    else if (second/first === last/secondToLast) {return "Geometric";}
+    else {return -1;}
 }
 
 
